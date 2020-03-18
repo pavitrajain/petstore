@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression suite">
+    <listeners>
+        <listener class-name="io.swagger.extent_report.TestListner"/>
+    </listeners>
+    <test verbose="2" name="petAPI" enabled="true">
+        <classes>
+            <class name="io.swagger.petAPI.AddPetTest"/>
+            <class name="io.swagger.petAPI.RemovePetTest"/>
+        </classes>
+    </test>
+    <test name="storeAPI" enabled="true">
+        <classes>
+            <class name="io.swagger.storeAPI.PlaceOrderTest"/>
+        </classes>
+    </test>
+    <test verbose="2" name="regression" enabled="true">
+        <classes>
+            <class name="io.swagger.petAPI.AddPetTest"/>
+            <class name="io.swagger.petAPI.RemovePetTest"/>
+            <class name="io.swagger.storeAPI.PlaceOrderTest"/>
+        </classes>
+    </test>
+</suite>
